@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2>Stepper</h2>
+    </header>
+    <div class="stepper-container">
+        <div class="steps">
+            <div class="step active">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+            <div class="step">4</div>
+            <div class="step hidden">5</div>
+        </div>
+        <div class="content">
+            <div class="step-content active">Contact Details</div>
+            <div class="step-content">Shipping Address</div>
+            <div class="step-content">Payment</div>
+            <div class="step-content">Delivered</div>
+            <div class="step-content hidden">Finished</div>
+        </div>
+        <div class="details">
+            <p class="step-detail active">Add contact details for further communications.</p>
+            <p class="step-detail">Add shipping address for successful delivery.</p>
+            <p class="step-detail">Complete Payment to complete the order.</p>
+            <p class="step-detail">Ready to get delivered!</p>
+            <p class="step-detail">Order delivered successfully! 🎉</p>
+        </div>
+        <div class="controls">
+            <button id="prev" disabled>Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

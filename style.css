@@ -1,0 +1,98 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    width: 100vw;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.stepper-container {
+    width: 90vw;
+    margin: 1rem auto;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px solid #000;
+    background: rgb(163, 160, 160);
+    border-radius: 50%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.step.active {
+    background: #007bff;
+    color: #fff;
+    border-color: #000;
+}
+
+.step.activated {
+    background: #00aa00;
+    color: #fff;
+    border-color: #000;
+}
+
+.content {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-content {
+    display: block;
+    font-size: 16px;
+}
+
+.step-content.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.step-detail {
+    margin-bottom: 20px;
+    display: none;
+    font-weight: bold;
+}
+
+.step-detail.active {
+    display: block;
+}
+
+.controls button {
+    padding: 10px 20px;
+    border: none;
+    background: rgb(163, 160, 160);
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
