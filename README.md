@@ -1,1 +1,1 @@
-Stepper mini project - pls check deployed version on Vercel. 
+Stepper mini project - pls check deployed version on Vercel - https://stepper-henna.vercel.app/
