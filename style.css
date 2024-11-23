@@ -26,7 +26,7 @@ body {
 
 .steps {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -39,6 +39,7 @@ body {
     border-radius: 50%;
     font-weight: bold;
     transition: 0.3s;
+    flex-shrink: 0;
 }
 
 .step.active {
@@ -55,8 +56,8 @@ body {
 }
 
 .line {
-    width: 10rem;
-    margin: auto 0;
+    width: 20rem;
+    margin: 1.5rem 0;
     height: 5px;
     background: rgb(163, 160, 160);
     transition: 0.3s;
@@ -75,6 +76,7 @@ body {
 .step-content {
     display: block;
     font-size: 16px;
+    padding: 1rem 0;
 }
 
 .hidden {
