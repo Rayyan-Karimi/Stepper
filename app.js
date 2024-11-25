@@ -10,21 +10,31 @@ let currentStep = 0;
 /**
  * Main functions
  */
-prevButton.addEventListener("click", () => {
-    if (currentStep > 0) {
-        currentStep--;
-        updateStepper();
-        updateLinesBackward();
+const movementButtons = document.querySelector(".controls");
+movementButtons.addEventListener("click", (event) => {
+    if (event.target.classList.contains("movement-button")) {
+        const action = event.target.dataset.button;
+        switch (action) {
+            case "prev":
+                if (currentStep > 0) {
+                    currentStep--;
+                    updateStepper();
+                    updateLinesBackward();
+                }
+                break;
+            case "next":
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    updateStepper();
+                    updateLinesForward();
+                }
+                break;
+            default:
+                console.error("Clicked button for unknown action:", action);
+        }
+        console.log(`Clicked button for action: ${action}`);
     }
-});
-
-nextButton.addEventListener("click", () => {
-    if (currentStep < steps.length - 1) {
-        currentStep++;
-        updateStepper();
-        updateLinesForward();
-    }
-});
+})
 
 function updateStepper() {
     updateSteps();
@@ -51,13 +61,11 @@ function updateSteps() {
 }
 
 function updateLinesForward() {
-    console.log("Forw", currentStep);
     if (currentStep > 0 && currentStep < 4)
         lines[currentStep - 1].classList.toggle("activated");
 }
 
 function updateLinesBackward() {
-    console.log("Back", currentStep);
     if (currentStep >= 0 && currentStep < 3)
         lines[currentStep].classList.toggle("activated");
 }
